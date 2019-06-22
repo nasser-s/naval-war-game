@@ -13,7 +13,7 @@ Simple multiplayer game
     <li>User <b>arrow keys</b> to change ship direction and speed</li>
     <li>Use <b>'X'</b> to fire torpedo</li>    
     </ul>      
-    <h3>Detailed information about implementation exist in the file <a href="https://github.com/nasser-s/simple-game/blob/master/doc/doc.odt">'doc/doc.odt'</a></h3>
+    <h3>Detailed information about implementation exist in the file <a href="https://github.com/nasser-s/naval-war-game/blob/master/doc/doc.odt">'doc/doc.odt'</a></h3>
 <h3>To do:</h3>
 <ul>
 <li>Export all literals into property file</li>
