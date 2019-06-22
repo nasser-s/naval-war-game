@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello WebSocket</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="/main.css" rel="stylesheet">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+    <script src="js/mousetrap.min.js"></script>
+    <script src="js/sockjs.js"></script>
+    <script src="js/stomp.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
+    enabled. Please enable
+    Javascript and reload this page!</h2></noscript>
+<div id="main-content" class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="connect">Connect to game server:</label>
+                    <button id="connect" class="btn btn-default" type="submit">Connect</button>
+                    <button id="disconnect" class="btn btn-default" type="submit" disabled="disabled">Disconnect
+                    <button id="restart" class="btn btn-default" type="submit" style="display:none">Restart
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="name">What is your name?</label>
+                    <input type="text" id="name" class="form-control" placeholder="Your name here...">
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div class="row">
+
+
+        <div class="col-md-12">
+            <canvas id="myCanvas" width="500" height="500" style="border: 1px solid blue;"></canvas>
+        </div>
+
+
+        <div class="col-md-12">
+            <table id="result" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Result</th>
+                </tr>
+                </thead>
+                <tbody id="report">
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-12">
+            First connect to game server and specify your name.<br/> Then click on canvas to activate game and user arrow keys to move and <b>X</b>  to fire.
+            <img src="img/arrowkeys.png"/>
+            <img src="img/xkey.jpg"/>
+        </div>
+
+    </div>
+</div>
+<img src="img/p1x.png" id="p0" style="display: none">
+<img src="img/p2x.png" id="p1" style="display: none">
+<img src="img/p2.png" id="p2" style="display: none">
+<img src="img/torpedo.png" id="bullet" style="display: none">
+</body>
+</html>
